@@ -8,6 +8,8 @@ import {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import cvAsset from "@/assets/cv.pdf.asset.json";
+import fnbCertificate from "@/assets/fnb-certificate.pdf.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({ meta: [
@@ -45,7 +47,7 @@ function SectionHeading({ eyebrow, title, intro }: { eyebrow: string; title: str
 }
 
 function CvButton({ compact = false }: { compact?: boolean }) {
-  return <Button variant="portfolio" size={compact ? "default" : "lg"} disabled title="Add your real CV PDF to activate this button"><Download /> Download My CV</Button>;
+  return <Button asChild variant="portfolio" size={compact ? "default" : "lg"}><a href={cvAsset.url} target="_blank" rel="noopener noreferrer" download="Refilwe-Thando-Tladi-CV.pdf"><Download /> Download My CV</a></Button>;
 }
 
 function Pill({ children }: { children: ReactNode }) {
