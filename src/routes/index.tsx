@@ -42,6 +42,18 @@ const projects = [
   { title: "Future Technology Project", description: "An editable placeholder for another website, application, or digital project I create as I continue developing my technical skills.", technologies: "To be updated", features: "To be updated", status: "Editable placeholder", available: false },
 ];
 
+const experience: { title: string; company: string; dates: string; summary: string }[] = [
+  { title: "Inbound & Outbound Call Centre Agent", company: "iBhongo Card Collections (Pty) Ltd", dates: "Sep 2023 – 2025", summary: "Recovered outstanding accounts, attended to client queries and worked towards collection targets while maintaining professional standards under pressure." },
+  { title: "Web Content Manager", company: "Ceratile", dates: "May 2022 – Sep 2023", summary: "Managed website content, updated product listings, pricing and promotions, and ensured product information stayed accurate." },
+  { title: "Receptionist", company: "DNA Brand Architects", dates: "Nov 2019 – Dec 2021", summary: "Welcomed and assisted clients, managed calls, emails and appointments, kept accurate records and handled general administration and data capturing." },
+];
+const contactDetails: [typeof Mail, string, string | null][] = [
+  [Mail, "refilwe.tladi@icloud.com", "mailto:refilwe.tladi@icloud.com"],
+  [Phone, "083 273 0753", "tel:+27832730753"],
+  [MapPin, "Protea North, Soweto, South Africa", null],
+  [Github, "github.com/refilwetladi", "https://github.com/refilwetladi"],
+];
+
 function SectionHeading({ eyebrow, title, intro }: { eyebrow: string; title: string; intro?: string }) {
   return <div className="mb-10 max-w-2xl"><p className="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-primary">{eyebrow}</p><h2 className="font-display text-3xl font-bold leading-tight text-foreground sm:text-4xl">{title}</h2>{intro && <p className="mt-4 leading-7 text-muted-foreground">{intro}</p>}</div>;
 }
